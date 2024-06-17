@@ -1,0 +1,72 @@
+{
+    "tower": {
+        "current": {
+            "cards": {},
+            "godCard": {
+                "id": "card_06",
+                "subGodCardId": ""
+            },
+            "halftime": {
+                "canGiveUp": false,
+                "candidate": [],
+                "count": 0
+            },
+            "layer": [
+                {
+                    "id": "lt_13_01",
+                    "try": 1,
+                    "pass": false
+                },
+                {
+                    "id": "lt_13_02",
+                    "try": 0,
+                    "pass": false
+                },
+                {
+                    "id": "lt_13_03",
+                    "try": 0,
+                    "pass": false
+                },
+                {
+                    "id": "lt_13_04",
+                    "try": 0,
+                    "pass": false
+                },
+                {
+                    "id": "lt_13_05",
+                    "try": 0,
+                    "pass": false
+                },
+                {
+                    "id": "lt_13_06",
+                    "try": 0,
+                    "pass": false
+                }
+            ],
+            "reward": {
+                "high": 0,
+                "low": 0
+            },
+            "status": {
+                "coord": 0,
+                "isHard": false,
+                "start": 1715675811,
+                "state": "INIT_CARD",
+                "strategy": "OPTIMIZE",
+                "tactical": {
+                    "PIONEER": "tatical_pioneer_01",
+                    "WARRIOR": "tatical_warrior_01",
+                    "TANK": "tatical_tank_01",
+                    "SNIPER": "tatical_sniper_01",
+                    "CASTER": "tatical_caster_01",
+                    "SUPPORT": "tatical_support_01",
+                    "MEDIC": "tatical_medic_01",
+                    "SPECIAL": "tatical_special_01"
+                },
+                "tower": "tower_n_13"
+            },
+            "trap": []
+        }
+    },
+    "currentStage": "lt_13_01"
+}

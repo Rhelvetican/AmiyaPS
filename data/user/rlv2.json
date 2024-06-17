@@ -1,0 +1,92 @@
+{
+    "player": {
+        "state": "INIT",
+        "property": {
+            "exp": 0,
+            "level": 10,
+            "maxLevel": 10,
+            "hp": {
+                "current": 10000,
+                "max": 10000
+            },
+            "gold": 600,
+            "shield": 10000,
+            "capacity": 10000,
+            "population": {
+                "cost": 0,
+                "max": 6
+            },
+            "conPerfectBattle": 0
+        },
+        "cursor": {
+            "zone": 0,
+            "position": null
+        },
+        "trace": [],
+        "pending": [
+            {
+                "index": "e_1",
+                "type": "GAME_INIT_RECRUIT_SET",
+                "content": {
+                    "initRecruitSet": {
+                        "step": [
+                            2,
+                            3
+                        ],
+                        "option": [
+                            "recruit_group_1"
+                        ]
+                    }
+                }
+            }
+        ],
+        "status": {
+            "bankPut": 0
+        },
+        "toEnding": "ro3_ending_1",
+        "chgEnding": false
+    },
+    "record": {
+        "brief": null
+    },
+    "map": {
+        "zones": {}
+    },
+    "troop": {
+        "chars": {},
+        "expedition": [],
+        "expeditionReturn": null,
+        "hasExpeditionReturn": false
+    },
+    "inventory": {
+        "relic": {
+            "r_0": {
+                "index": "r_0",
+                "id": "rogue_3_band_7",
+                "count": 1,
+                "ts": 1695000000
+            }
+        },
+        "recruit": {},
+        "trap": null,
+        "consumable": {},
+        "exploreTool": {}
+    },
+    "game": {
+        "mode": "NORMAL",
+        "predefined": null,
+        "theme": "rogue_3",
+        "outer": {
+            "support": false
+        },
+        "start": 1695000000,
+        "modeGrade": 0,
+        "equivalentGrade": 0
+    },
+    "buff": {
+        "tmpHP": 0,
+        "capsule": null,
+        "squadBuff": []
+    },
+    "module": {}
+}
