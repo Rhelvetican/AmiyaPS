@@ -1,6 +1,7 @@
 from server.utils.json import read_json, write_json
 from server.utils.misc import update_data
 from server.const import BUILDING_JSON_PATH, USER_JSON_PATH, BUILDING_TABLE_URL
+from litestar import post
 
 
 def updateBuildingCharInstIdList(building_data):
@@ -16,6 +17,7 @@ def updateBuildingCharInstIdList(building_data):
             building_data["chars"][k]["index"] = j
 
 
+@post("/building/sync")
 def buildingSync():
     building_data = read_json(BUILDING_JSON_PATH)
     user_data = read_json(USER_JSON_PATH)
@@ -42,14 +44,17 @@ def buildingSync():
     return data
 
 
+@post("/building/getRecentVisitors")
 def building_getRecentVisitors():
     return {"visitors": []}
 
 
+@post("/building/getInfoShareVisitorsNum")
 def building_getInfoShareVisitorsNum():
     return {"num": 0}
 
 
+@post("/building/changeDiySolution")
 def building_changeDiySolution(request_data: dict):
     roomSlotId = request_data["roomSlotId"]
     diySolution = request_data["solution"]
@@ -61,10 +66,10 @@ def building_changeDiySolution(request_data: dict):
     return data
 
 
+@post("/building/assignChar")
 def building_assignChar(request_data: dict):
     roomSlotId = request_data["roomSlotId"]
     charInstIdList = request_data["charInstIdList"]
-
     building_data = read_json(BUILDING_JSON_PATH)
     for i in charInstIdList:
         if i == -1:
@@ -81,6 +86,7 @@ def building_assignChar(request_data: dict):
     return data
 
 
+@post("/building/setBuildingAssist")
 def building_setBuildingAssist(request_data: dict):
     building_data = read_json(BUILDING_JSON_PATH)
     building_data["assist"][request_data["type"]] = request_data["charInstId"]
@@ -89,5 +95,6 @@ def building_setBuildingAssist(request_data: dict):
     return data
 
 
+@post("/building/getAssistReport")
 def building_getAssistReport():
     return {"reports": [], "playerDataDelta": {"modified": {}, "deleted": {}}}
